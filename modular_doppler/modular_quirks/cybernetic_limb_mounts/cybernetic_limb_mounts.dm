@@ -41,7 +41,6 @@
 
 	var/list/exclusions = list()
 	exclusions += BODY_ZONE_CHEST
-	exclusions += BODY_ZONE_HEAD
 	if (!isandroid(cast_on))
 		exclusions += BODY_ZONE_HEAD
 
