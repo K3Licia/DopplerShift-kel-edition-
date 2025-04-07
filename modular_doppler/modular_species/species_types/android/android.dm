@@ -38,9 +38,18 @@
 	body_markings = list(/datum/bodypart_overlay/simple/body_marking/lizard = "None")
 	mutantheart = /obj/item/organ/heart/cybernetic/tier2
 	mutantstomach = /obj/item/organ/stomach/cybernetic/tier2
+	mutantbrain = /obj/item/organ/brain/cybernetic
 	mutantliver = /obj/item/organ/liver/cybernetic/tier2
 	exotic_blood = /datum/reagent/synth_blood
 	exotic_bloodtype = "R*"
+
+/obj/item/organ/brain/cybernetic
+	name = "cybernetic brain"
+	desc = "A mechanical brain found inside of androids. Not to be confused with a positronic brain."
+	icon_state = "brain-c"
+	organ_flags = ORGAN_ROBOTIC | ORGAN_VITAL
+	failing_desc = "seems to be broken, and will not work without repairs."
+	zone = BODY_ZONE_CHEST
 
 	bodytemp_heat_damage_limit = (BODYTEMP_NORMAL + 146) // 456 K / 183 C
 	bodytemp_cold_damage_limit = (BODYTEMP_NORMAL - 80) // 230 K / -43 C
