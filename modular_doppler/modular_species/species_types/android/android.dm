@@ -66,7 +66,7 @@
 /obj/item/organ/ears/cybernetic
 	name = "audio receiver"
 	desc = "A listening device commonly found within androids. It allows them to hear."
-	icon = "prototype3"
+	icon_state = "ears-c"
 	organ_flags = ORGAN_ROBOTIC
 	zone = BODY_ZONE_CHEST
 	failing_desc = "seems to be broken."
