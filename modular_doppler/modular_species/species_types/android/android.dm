@@ -39,6 +39,9 @@
 	mutantheart = /obj/item/organ/heart/cybernetic/tier2
 	mutantstomach = /obj/item/organ/stomach/cybernetic/tier2
 	mutantbrain = /obj/item/organ/brain/cybernetic
+	mutantears = /obj/item/organ/ears/cybernetic
+	mutanteyes = /obj/item/organ/eyes/robotic
+	mutanttongue = /obj/item/organ/tongue/robot
 	mutantliver = /obj/item/organ/liver/cybernetic/tier2
 	exotic_blood = /datum/reagent/synth_blood
 	exotic_bloodtype = "R*"
@@ -49,6 +52,30 @@
 	icon_state = "brain-c"
 	organ_flags = ORGAN_ROBOTIC | ORGAN_VITAL
 	failing_desc = "seems to be broken, and will not work without repairs."
+	zone = BODY_ZONE_CHEST
+
+/obj/item/organ/ears/cybernetic
+	name = "audio receiver"
+	desc = "A listening device commonly found within androids. It allows them to hear."
+	icon_state = "prototype3"
+	organ_flags = ORGAN_ROBOTIC
+	failing_desc = "seems to be broken."
+	zone = BODY_ZONE_CHEST
+
+/obj/item/organ/eyes/robotic
+	name = "robotic eyes"
+	desc = "A pair of cybernetic eyes."
+	icon_state = "cybernetic_eyeballs"
+	organ_flags = ORGAN_ROBOTIC
+	failing desc = "seems to be broken."
+	zone = BODY_ZONE_HEAD
+	
+/obj/item/organ/tongue/robotic
+	name = "robotic voicebox"
+	desc = "A voice synthesizer that can interface with organic lifeforms."
+	icon_state = "tonguerobot"
+	organ_flags = ORGAN_ROBOTIC
+	failing desc = "seems to be broken."
 	zone = BODY_ZONE_CHEST
 
 	bodytemp_heat_damage_limit = (BODYTEMP_NORMAL + 146) // 456 K / 183 C
