@@ -211,6 +211,7 @@
 /obj/item/organ/ears/android
 	name = "audio receiver"
 	desc = "A listening device commonly found within androids. It allows them to hear."
+	icon = 'icons/obj/devices/artefacts.dmi'
 	icon_state = "prototype3"
 	organ_flags = ORGAN_ROBOTIC
 	failing_desc = "seems to be broken."
