@@ -46,6 +46,15 @@
 	exotic_blood = /datum/reagent/synth_blood
 	exotic_bloodtype = "R*"
 
+	bodytemp_heat_damage_limit = (BODYTEMP_NORMAL + 146) // 456 K / 183 C
+	bodytemp_cold_damage_limit = (BODYTEMP_NORMAL - 80) // 230 K / -43 C
+	/// Ability to recharge!
+	var/datum/action/innate/power_cord/power_cord
+	/// Hud element to display our energy level
+	var/atom/movable/screen/android/energy/energy_tracker
+	/// How much energy we start with
+	var/core_energy = ENERGY_START_AMT
+
 /obj/item/organ/brain/cybernetic
 	name = "cybernetic brain"
 	desc = "A mechanical brain found inside of androids. Not to be confused with a positronic brain."
@@ -77,15 +86,6 @@
 	organ_flags = ORGAN_ROBOTIC
 	failing desc = "seems to be broken."
 	zone = BODY_ZONE_CHEST
-
-	bodytemp_heat_damage_limit = (BODYTEMP_NORMAL + 146) // 456 K / 183 C
-	bodytemp_cold_damage_limit = (BODYTEMP_NORMAL - 80) // 230 K / -43 C
-	/// Ability to recharge!
-	var/datum/action/innate/power_cord/power_cord
-	/// Hud element to display our energy level
-	var/atom/movable/screen/android/energy/energy_tracker
-	/// How much energy we start with
-	var/core_energy = ENERGY_START_AMT
 
 /datum/outfit/android_preview
 	name = "Android (Species Preview)"
