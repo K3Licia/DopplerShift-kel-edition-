@@ -124,6 +124,14 @@
 	name = "Survival Knife"
 	item_path = /obj/item/knife/combat/survival
 
+/datum/loadout_item/pocket_items/etool
+	name = "Entrenching Tool"
+	item_path = /obj/item/trench_tool
+
+/datum/loadout_item/pocket_items/swisstool
+	name = "Spess Knife"
+	item_path = /obj/item/spess_knife
+
 /datum/loadout_item/pocket_items/injector_case
 	name = "Autoinjector Case"
 	item_path = /obj/item/storage/epic_loot_medpen_case
@@ -195,6 +203,15 @@
 /datum/loadout_item/pocket_items/gromitmug
 	name = "Gromit mug"
 	item_path = /obj/item/reagent_containers/cup/glass/mug/gromitmug
+
+/datum/loadout_item/pocket_items/pacification_chip
+	name = "Meditative Assistance pacification skillchip"
+	item_path = /obj/item/skillchip/pacification
+
+/datum/loadout_item/pocket_items/shock_collar
+	name = "Shock collar"
+	item_path = /obj/item/electropack/shockcollar
+	additional_displayed_text = list("Zap.")
 
 /*
 *	UTILITY
