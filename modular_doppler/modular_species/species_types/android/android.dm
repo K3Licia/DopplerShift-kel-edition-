@@ -39,7 +39,7 @@
 	mutantheart = /obj/item/organ/heart/cybernetic/tier2
 	mutantstomach = /obj/item/organ/stomach/cybernetic/tier2
 	mutantbrain = /obj/item/organ/brain/cybernetic
-	mutantears = /obj/item/organ/ears/cybernetic
+	mutantears = /obj/item/organ/ears/android
 	mutanteyes = /obj/item/organ/eyes/robotic
 	mutanttongue = /obj/item/organ/tongue/robot
 	mutantliver = /obj/item/organ/liver/cybernetic/tier2
@@ -63,10 +63,10 @@
 	zone = BODY_ZONE_CHEST
 	failing_desc = "seems to be broken, and will not work without repairs."
 
-/obj/item/organ/ears/cybernetic
+/obj/item/organ/ears/android
 	name = "audio receiver"
 	desc = "A listening device commonly found within androids. It allows them to hear."
-	icon_state = "ears-c"
+	icon_state = "prototype3"
 	organ_flags = ORGAN_ROBOTIC
 	zone = BODY_ZONE_CHEST
 	failing_desc = "seems to be broken."
