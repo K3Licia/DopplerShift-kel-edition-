@@ -60,32 +60,32 @@
 	desc = "A mechanical brain found inside of androids. Not to be confused with a positronic brain."
 	icon_state = "brain-c"
 	organ_flags = ORGAN_ROBOTIC | ORGAN_VITAL
-	failing_desc = "seems to be broken, and will not work without repairs."
 	zone = BODY_ZONE_CHEST
+	failing_desc = "seems to be broken, and will not work without repairs."
 
 /obj/item/organ/ears/cybernetic
 	name = "audio receiver"
 	desc = "A listening device commonly found within androids. It allows them to hear."
 	icon_state = "prototype3"
 	organ_flags = ORGAN_ROBOTIC
-	failing_desc = "seems to be broken."
 	zone = BODY_ZONE_CHEST
+	failing_desc = "seems to be broken."
 
 /obj/item/organ/eyes/robotic
 	name = "robotic eyes"
 	desc = "A pair of cybernetic eyes."
 	icon_state = "cybernetic_eyeballs"
 	organ_flags = ORGAN_ROBOTIC
-	failing desc = "seems to be broken."
 	zone = BODY_ZONE_HEAD
+	failing_desc = "seems to be broken."
 	
 /obj/item/organ/tongue/robotic
 	name = "robotic voicebox"
 	desc = "A voice synthesizer that can interface with organic lifeforms."
 	icon_state = "tonguerobot"
 	organ_flags = ORGAN_ROBOTIC
-	failing desc = "seems to be broken."
 	zone = BODY_ZONE_CHEST
+	failing_desc = "seems to be broken."
 
 /datum/outfit/android_preview
 	name = "Android (Species Preview)"
