@@ -79,13 +79,10 @@
 	zone = BODY_ZONE_HEAD
 	failing_desc = "seems to be broken."
 	
-/obj/item/organ/tongue/android
+/obj/item/organ/tongue/robot/android
 	name = "android voicebox"
-	desc = "A voice synthesizer unique to androids. It allows them to speak."
-	icon_state = "tonguerobot"
-	organ_flags = ORGAN_ROBOTIC
+	desc = "A voice synthesizer unique to androids. It is designed to be put in the torso."
 	zone = BODY_ZONE_CHEST
-	failing_desc = "seems to be broken."
 
 /datum/outfit/android_preview
 	name = "Android (Species Preview)"
