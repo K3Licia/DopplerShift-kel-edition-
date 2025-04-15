@@ -40,7 +40,7 @@
 	mutantstomach = /obj/item/organ/stomach/cybernetic/tier2
 	mutantbrain = /obj/item/organ/brain/cybernetic
 	mutantears = /obj/item/organ/ears/android
-	mutanttongue = /obj/item/organ/tongue/robot/androi
+	mutanttongue = /obj/item/organ/tongue/robot/android
 	mutantliver = /obj/item/organ/liver/cybernetic/tier2
 	exotic_blood = /datum/reagent/synth_blood
 	exotic_bloodtype = "R*"
