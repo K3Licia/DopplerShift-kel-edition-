@@ -71,14 +71,6 @@
 	zone = BODY_ZONE_CHEST
 	failing_desc = "seems to be broken."
 
-/obj/item/organ/eyes/robotic
-	name = "robotic eyes"
-	desc = "A pair of cybernetic eyes."
-	icon_state = "cybernetic_eyeballs"
-	organ_flags = ORGAN_ROBOTIC
-	zone = BODY_ZONE_HEAD
-	failing_desc = "seems to be broken."
-	
 /obj/item/organ/tongue/robot/android
 	name = "android voicebox"
 	desc = "A voice synthesizer unique to androids. It is designed to be put in the torso."
