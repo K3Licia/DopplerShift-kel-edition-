@@ -66,6 +66,7 @@
 /obj/item/organ/ears/android
 	name = "audio receiver"
 	desc = "A listening device commonly found within androids. It is designed to be put in the torso."
+	icon = 'icons/obj/devices/artefacts.dmi'
 	icon_state = "prototype3"
 	organ_flags = ORGAN_ROBOTIC
 	zone = BODY_ZONE_CHEST
