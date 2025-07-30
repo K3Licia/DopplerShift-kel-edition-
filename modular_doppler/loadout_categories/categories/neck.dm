@@ -56,10 +56,6 @@
 	name = "Face Scarf"
 	item_path = /obj/item/clothing/neck/face_scarf
 
-/datum/loadout_item/neck/maid_neck_cover
-	name = "Maid Neck Cover"
-	item_path = /obj/item/clothing/neck/maid_neck_cover
-
 /datum/loadout_item/neck/collar
 	name = "Thin Collar"
 	item_path = /obj/item/clothing/neck/fashion_collar
@@ -123,3 +119,7 @@
 /datum/loadout_item/neck/vatcloak
 	name = "Vatcloak"
 	item_path = /obj/item/clothing/neck/vulp_cloak
+
+/datum/loadout_item/neck/mantle
+	name = "Mantle"
+	item_path = /obj/item/clothing/neck/mantle/recolorable
