@@ -264,6 +264,7 @@
 		"Custodian",
 		"Butler",
 		"Maid",
+		"Housekeeper",
 		"Maintenance Technician",
 		"Sanitation Technician",
 	)
