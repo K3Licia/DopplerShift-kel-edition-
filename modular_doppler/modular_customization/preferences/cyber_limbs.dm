@@ -66,11 +66,17 @@ GLOBAL_LIST_INIT(frame_type_names, list(
 	if(target.dna.features["frame_list"] && !(type in GLOB.species_blacklist_no_humanoid))
 		//head
 		if(target.dna.features["frame_list"][BODY_ZONE_HEAD])
+			var/is_headless = FALSE
+			if(target.dna.features["frame_list"][BODY_ZONE_HEAD] == /obj/item/bodypart/head/robot/android/empty)
+				is_headless = TRUE
+			var/obj/item/organ/brain/target_brain = target.get_organ_slot(ORGAN_SLOT_BRAIN)
+			if(target_brain.zone == BODY_ZONE_HEAD)
+				is_headless = FALSE
 			var/obj/item/bodypart/head/old_limb = target.get_bodypart(BODY_ZONE_HEAD)
 			if(old_limb)
 				old_limb.drop_limb(TRUE, FALSE, FALSE)
 				old_limb.moveToNullspace()
-			if(target.dna.features["frame_list"][BODY_ZONE_HEAD] != /obj/item/bodypart/head/robot/android/empty)
+			if(!is_headless)
 				var/obj/item/bodypart/head/replacement = SSwardrobe.provide_type(target.dna.features["frame_list"][BODY_ZONE_HEAD])
 				replacement.try_attach_limb(target, TRUE)
 		//chest
