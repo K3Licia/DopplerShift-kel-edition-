@@ -262,6 +262,7 @@
 		"Concierge",
 		"Custodial Technician",
 		"Custodian",
+		"Butler",
 		"Maid",
 		"Maintenance Technician",
 		"Sanitation Technician",
