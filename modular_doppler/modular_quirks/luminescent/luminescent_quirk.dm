@@ -31,24 +31,16 @@ GLOBAL_LIST_INIT(possible_quirk_extracts, list(
 	gain_text = span_notice("You feel a power welling up within your core.")
 	lose_text = span_warning("The power in your core fades...")
 	medical_record_text = "Patient possesses a unique core."
-	quirk_flags = QUIRK_HUMAN_ONLY
 	// a variable holding the extract spawned so we can keep track of it
 	var/obj/item/slime_extract/spawned_extract
 /datum/quirk/item_quirk/luminescent/add_unique(client/client_source)
-	var/mob/living/carbon/human/human_holder = quirk_holder
+	if(isjelly(quirk_holder))
 	// fetch the quirk
 	var/extract_path = GLOB.possible_quirk_extracts[client_source.prefs?.read_preference(/datum/preference/choiced/luminescent_extract)]
 	// instantiate it in nullspace
 	spawned_extract = new extract_path()
-	// activate it
-	spawned.extract.activate(quirk_human,quirk_human.dna.species, SLIME_ACTIVATE_MAJOR)
-	// or put in hands
+	// put in hands
 	give_item_to_holder(spawned_extract, list(LOCATION_RPOCKET, LOCATION_LPOCKET, LOCATION_BACKPACK, LOCATION_HANDS))
-
-/datum/quirk/item_quirk/luminescent/is_species_appropriate(datum/species/mob_species)
-	if(mob_species != /datum/species/jelly)
-		return FALSE
-	return ..()
 
 /datum/quirk_constant_data/luminescent
 		associated_typepath = /datum/quirk/item_quirk/luminescent
