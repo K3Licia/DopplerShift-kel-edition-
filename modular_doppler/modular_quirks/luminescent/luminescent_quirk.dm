@@ -26,23 +26,27 @@ GLOBAL_LIST_INIT(possible_quirk_extracts, list(
 /datum/quirk/item_quirk/luminescent
 	name = "Luminescent"
 	desc = "You are more resonant-inclined than the rest of your slimy peers, and gain one slime extract of your choosing. Exclusive to Slimepeople."
-	value = 2
+	value = 1
 	icon = FA_ICON_MAGIC
 	gain_text = span_notice("You feel a power welling up within your core.")
 	lose_text = span_warning("The power in your core fades...")
 	medical_record_text = "Patient possesses a unique core."
 	quirk_flags = QUIRK_HUMAN_ONLY
+	// a variable holding the extract spawned so we can keep track of it
+	var/object/item/slime_extract/spawned_extract
 
 /datum/quirk/item_quirk/luminescent/add_unique(client/client_source)
 	var/mob/living/carbon/human/human_holder = quirk_holder
-	desired_extract = GLOB.possible_quirk_extracts[client_source?.prefs?.read_preference(/datum/preference/choiced/luminescent_extract)]
-		give_item_to_holder(GLOB.possible_quirk_extracts, list(LOCATION_RPOCKET, LOCATION_LPOCKET, LOCATION_BACKPACK, LOCATION_HANDS))
+	// fetch the quirk
+	var/extract_path = GLOB.possible_quirk_extracts[client_source.prefs?.read_preference(/datum/preference/choiced/luminescent_extract)]
+	// instantiate it in nullspace
+	spawned_extract = new extract_path()
+	// activate it
+	spawned.extract.activate(quirk_human,quirk_human.dna.species, SLIME_ACTIVATE_MAJOR)
+	// or put in hands
+	give_item_to_holder(spawned_extract, list(LOCATION_RPOCKET, LOCATION_LPOCKET, LOCATION_BACKPACK, LOCATION_HANDS))
 
-/datum/quirk/item_quirk/luminescent/remove()
-
-var/obj/item/slime_extract/desired_extract
-
-/datum/quirk/luminescent/is_species_appropriate(datum/species/mob_species)
+/datum/quirk/item_quirk/luminescent/is_species_appropriate(datum/species/mob_species)
 	if(mob_species != /datum/species/jelly)
 		return FALSE
 	return ..()
