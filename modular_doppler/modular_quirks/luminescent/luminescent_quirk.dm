@@ -33,8 +33,7 @@ GLOBAL_LIST_INIT(possible_quirk_extracts, list(
 	medical_record_text = "Patient possesses a unique core."
 	quirk_flags = QUIRK_HUMAN_ONLY
 	// a variable holding the extract spawned so we can keep track of it
-	var/object/item/slime_extract/spawned_extract
-
+	var/obj/item/slime_extract/spawned_extract
 /datum/quirk/item_quirk/luminescent/add_unique(client/client_source)
 	var/mob/living/carbon/human/human_holder = quirk_holder
 	// fetch the quirk
